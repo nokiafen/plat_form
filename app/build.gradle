@@ -1,11 +1,11 @@
 apply plugin: 'com.android.library'
 //apply plugin:  rootProject.ext.plugin.application
-apply plugin: 'com.getkeepsafe.dexcount'
+//apply plugin: 'com.getkeepsafe.dexcount'
 apply plugin: rootProject.ext.plugin.retrolambda
 apply plugin: rootProject.ext.plugin.butterknife
 apply plugin: rootProject.ext.plugin.butterknifeLib
 apply plugin: 'maven'
-apply plugin: 'me.vigi.fat-aar'
+//apply plugin: 'me.vigi.fat-aar'
 
 uploadArchives {
     repositories {
@@ -25,12 +25,12 @@ uploadArchives {
 
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
     defaultConfig {
 //        applicationId "com.comba.android.combacommon"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -85,7 +85,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.0.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
     //    compile 'com.tencent.bugly:crashreport:latest.release'
     //    compile 'com.tencent.bugly:nativecrashreport:latest.release'
     compile 'com.orhanobut:logger:1.15'
@@ -106,12 +106,12 @@ dependencies {
     compile 'commons-io:commons-io:2.4'
     compile 'com.yanzhenjie.nohttp:nohttp:1.1.1'
     compile 'com.yanzhenjie.nohttp:okhttp:1.1.1'
-    embed 'com.orhanobut:dialogplus:1.11@aar'
+    compile 'com.orhanobut:dialogplus:1.11@aar'
     compile 'com.github.hss01248:DialogUtil:1.1.4'
 
     compile 'org.greenrobot:eventbus:3.0.0'
 
-    embed rootProject.ext.dependencies.nohttp
+    compile rootProject.ext.dependencies.nohttp
     compile rootProject.ext.dependencies.okhttp
     // support.
     compile rootProject.ext.dependencies.appcompat
